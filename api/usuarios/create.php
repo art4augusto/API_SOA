@@ -13,7 +13,6 @@ $data = json_decode(file_get_contents("php://input"));
 
 $item->nome     = $data->nome;
 $item->email    = $data->email;
-$item->senha    = md5($data->senha);
 
 if ($item->createUsuario()) {
     echo json_encode("Usuario Cadastrado com Sucesso!");
